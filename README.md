@@ -45,3 +45,55 @@ Tested on RTX 3050 Laptop GPU (4 GB VRAM).
    python -m tests.test_rnn
 
 
+### In the Resuls we see: 
+
+(myenv-cuda) PS D:\AI Models\pytorch\pytorch\torch\priority-memory-tracker> python -m tests.test_rnn
+
+=== Starting forward pass ===
+
+=== Forward pass STARTED === seq_len=512, batch=64, hidden_size=2048
+Allocated LSTM h+c stacked high pri |    1.0 MB | priority 1.0
+Input dtype: torch.float32
+h dtype: torch.float32
+c dtype: torch.float32
+Allocated gate intermediate medium-high pri |  536.9 MB | priority 0.8
+Allocated log buffer low pri   |    0.1 MB | priority 0.2
+Allocated temp calculation medium-low pri |    0.5 MB | priority 0.5
+Allocated output seq medium pri |  268.4 MB | priority 0.6
+  Processed timestep 100/512... current mem: 1708.5 MB
+  Processed timestep 200/512... current mem: 2442.5 MB
+  Processed timestep 300/512... current mem: 3176.5 MB
+  Processed timestep 400/512... current mem: 3910.5 MB
+  Processed timestep 500/512... current mem: 4644.5 MB
+=== Forward pass COMPLETED ===
+
+Tracked allocations (sorted by priority):
+  pri 0.2 |    0.1 MB | log buffer low pri
+  pri 0.5 |    0.5 MB | temp calculation medium-low pri
+  pri 0.6 |  268.4 MB | output seq medium pri
+  pri 0.8 |  536.9 MB | gate intermediate medium-high pri
+  pri 1.0 |    1.0 MB | LSTM h+c stacked high pri
+Total tracked: 807.0 MB
+
+Peak during computation: 4727.308288 MB
+Evicted: log buffer low pri             | pri 0.2 |    0.1 MB
+Evicted: temp calculation medium-low pri | pri 0.5 |    0.5 MB
+Evicted: output seq medium pri          | pri 0.6 |  268.4 MB
+Evicted: gate intermediate medium-high pri | pri 0.8 |  536.9 MB
+Evicted: LSTM h+c stacked high pri      | pri 1.0 |    1.0 MB
+Total freed: 807.0 MB
+Remaining tracked: 0.0 MB
+
+=== Results ===
+Output shape:           torch.Size([64, 512, 2048])
+Final hidden h shape:  torch.Size([64, 2048])
+Final cell c shape:    torch.Size([64, 2048])
+Sample output[0,0,:5]: tensor([-0.0130,  0.1255,  0.0651,  0.0663, -0.0281], device='cuda:0',
+       grad_fn=<SliceBackward0>)
+Current allocated after eviction: 4187.160576 MB
+Peak GPU memory used:  4727.308288 MB
+
+Tracked allocations (sorted by priority):
+Total tracked: 0.0 MB
+
+
