@@ -1,4 +1,4 @@
-# PyTorch Priority Memory Tracker
+#  Priority Memory Tracker
 
 A simple, user-controlled memory tracker for PyTorch that lets you allocate tensors with priorities and **manually evict low-priority allocations** when GPU memory pressure is high.
 
