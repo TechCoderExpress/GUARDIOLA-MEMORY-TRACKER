@@ -96,6 +96,7 @@ Peak during computation: 4727.308288 MB
 - Tracked allocations (sorted by priority):
 - Total tracked: 0.0 MB
 
+```text
 █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
 █  RTX 3050 - MEMORY PROFILER v1.0                                  █
 █───────────────────────────────────────────────────────────────────█
@@ -105,15 +106,14 @@ Peak during computation: 4727.308288 MB
 █                                                                   █
 █  LIVE TRACKING                                                    █
 █  ──────────────────────────────────────────────────────────────   █
-█  Total freed:   [||||||||||           ]  807.4 MB                 █
+█  Tootal Freed   [||||||||||           ]  807.4 MB                █
+█  PEAK USAGE      [|||||||||||||||||||||]  4.72 GB  (⚠ OVERFLOW)   █
 █                                                                   █
-█  PEAK USAGE      [|||||||||||||||||||||]  4.72 GB  (⚠ OVERFLOW)    
-█                                                                      
-█  EVENT LOG                                                           
-█  [14:20:01] ⚡ SCENE_INIT    :: Allocating buffers...             
-█  [14:20:05] 📈 PEAK_HIT      :: 4.68 GB (Shared Mem Used)             
-█  [14:20:06] ♻️ GARBAGE_COL   :: Cleanup routine started...         
-█  [14:20:07] ✅ FREED         :: Tracked memory released.         
-█                                                                   █
+█  EVENT LOG                                                        █
+█  ⚡ SCENE_INIT    :: Allocating buffers...             █
+█  📈 PEAK_HIT      :: 4.72 GB (Shared Mem Used)         █
+█  ♻️ GARBAGE_COL   :: Cleanup routine started...        █
+█  ✅ FREED         :: Tracked memory released.          █
+█  Current allocated after eviction:  4.18 GB                                                                █
 █  STATUS: OPTIMIZED                                                █
 █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
