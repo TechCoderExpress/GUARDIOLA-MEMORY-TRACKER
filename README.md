@@ -39,3 +39,9 @@ Tested on RTX 3050 Laptop GPU (4 GB VRAM).
 
    # Activate (Windows PowerShell)
    .\myenv-cuda\Scripts\Activate.ps1
+   # Install torch
+   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl cu124
+   # Run the test file
+   python -m tests.test_rnn
+
+
