@@ -115,5 +115,5 @@ Peak during computation: 4727.308288 MB
 █  ♻️ GARBAGE_COL   :: Cleanup routine started...       
 █  ✅ FREED         :: Tracked memory released.          
 █  Current allocated after eviction:  4.18 GB                                                              
-█  STATUS: OPTIMIZED                                                █
+█  STATUS: OPTIMIZED                                               
 █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
