@@ -106,14 +106,14 @@ Peak during computation: 4727.308288 MB
 █                                                                   █
 █  LIVE TRACKING                                                    █
 █  ──────────────────────────────────────────────────────────────   █
-█  Tootal Freed   [||||||||||           ]  807.4 MB                █
-█  PEAK USAGE      [|||||||||||||||||||||]  4.72 GB  (⚠ OVERFLOW)   █
-█                                                                   █
-█  EVENT LOG                                                        █
-█  ⚡ SCENE_INIT    :: Allocating buffers...             █
-█  📈 PEAK_HIT      :: 4.72 GB (Shared Mem Used)         █
-█  ♻️ GARBAGE_COL   :: Cleanup routine started...        █
-█  ✅ FREED         :: Tracked memory released.          █
-█  Current allocated after eviction:  4.18 GB                                                                █
+█  Tootal Freed   [||||||||||           ]  807.4 MB               
+█  PEAK USAGE      [|||||||||||||||||||||]  4.72 GB  (⚠ OVERFLOW)   
+█                                                                   
+█  EVENT LOG                                                        
+█  ⚡ SCENE_INIT    :: Allocating buffers...                        
+█  📈 PEAK_HIT      :: 4.72 GB (Shared Mem Used)         
+█  ♻️ GARBAGE_COL   :: Cleanup routine started...       
+█  ✅ FREED         :: Tracked memory released.          
+█  Current allocated after eviction:  4.18 GB                                                              
 █  STATUS: OPTIMIZED                                                █
 █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
